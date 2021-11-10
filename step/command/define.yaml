@@ -1,0 +1,85 @@
+# C风格注释
+- fileExtension:
+    - .c
+    - .cpp
+    - .cs
+    - .dart
+    - .go
+    - .php
+    - .java
+    - .js
+  # 单行注释
+  singleLine:
+    - //
+  # 多行注释开头(多行有多个标志的情况，相同位置的开始标志和结束标志必须配对)
+  multiLineStart:
+    - /*
+  # 多行注释结尾
+  multiLineEnd:
+    - '*/'
+# Python
+- fileExtension:
+    - .py
+  singleLine:
+    - #
+  multiLineStart:
+    - "'''"
+    - '"""'
+  multiLineEnd:
+    - "'''"
+    - '"""'
+# SQL
+- fileExtension:
+    - .sql
+  singleLine:
+    - '--'
+  multiLineStart:
+    - "/*"
+  multiLineEnd:
+    - '*/'
+# CSS
+- fileExtension:
+    - .css
+  singleLine:
+    -
+  multiLineStart:
+    - "/*"
+  multiLineEnd:
+    - '*/'
+# VB/VBS
+- fileExtension:
+    - .vb
+    - .vbs
+  singleLine:
+    - "'"
+  multiLineStart:
+    -
+  multiLineEnd:
+    -
+    # HTML风格
+- fileExtension:
+    - .aspx
+    - .htm
+    - .html
+    - .jsp
+    - .xml
+  singleLine:
+    - "'"
+  multiLineStart:
+    - '<!--'
+  multiLineEnd:
+    - '-->'
+# YAML风格
+- fileExtension:
+    - .yml
+    - .yaml
+    - .ini
+    - .properties
+  singleLine:
+    - '#'
+  multiLineStart:
+    -
+  multiLineEnd:
+    -
+  
+  

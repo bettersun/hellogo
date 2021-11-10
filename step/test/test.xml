@@ -1,0 +1,8 @@
+<!-- Test XML -->
+<test>
+	<propertey>123</propertey>
+	<!-- Setting
+	be sure this part is right  -->
+	<setting>
+	</setting>
+</test>
