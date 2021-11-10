@@ -21,6 +21,7 @@ func YamlToStruct(file string, s interface{}) error {
 	err = yaml.Unmarshal(b, s)
 	if err != nil {
 		log.Printf("%v\n", err.Error())
+		return err
 	}
 
 	return nil
