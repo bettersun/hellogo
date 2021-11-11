@@ -1,9 +1,9 @@
-# 统计目标文件扩展名(.+小写，多个用逗号连接)
+# 统计目标文件扩展名(.+小写，多个用逗号连接，不指定则统计忽略目录和忽略文件之外的所有文件)
 #codeFileExt: .java,.c,.go,.yaml, ,    ,,
 codeFileExt:
 # 结果文件类型
 #  0: txt 1:json
-resultFileType: 3
+resultFileType: 0
 # 结果文件名(不含扩展名)
 resultFileName: step_result
 # 忽略目录(多个用逗号连接)

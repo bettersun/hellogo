@@ -69,11 +69,10 @@ type StepInfo struct {
 
 // StepSummary 代码行数信息汇总
 type StepSummary struct {
-	FileCount int `json:"fileCount"` // 文件总数
-
-	StepInfo      []StepInfo `json:"stepInfo"`      // 代码行数统计结果
-	FlatFile      []string   `json:"flatFile"`      // 无注释定义文件
-	UnCountedFile []string   `json:"unCountedFile"` // 未统计文件
+	StepInfo         []StepInfo `json:"stepInfo"`         // 代码行数统计结果
+	CountedFileCount int        `json:"countedFileCount"` // 统计文件总数
+	FlatFile         []string   `json:"flatFile"`         // 无注释定义文件
+	UnCountedFile    []string   `json:"unCountedFile"`    // 未统计文件
 
 	TotalStep     int `json:"totalStep"`     // 总行数
 	EmptyLineStep int `json:"emptyLineStep"` // 空行总行数

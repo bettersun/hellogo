@@ -35,20 +35,20 @@ func SummaryToText(summary StepSummary) []string {
 	headerAll := "统计文件总数\t总行数\t总空行数\t总注释行数\t总代码行数\t总有效行数"
 	s = append(s, headerAll)
 	stepAll := fmt.Sprintf("%v\t%v\t%v\t%v\t%v\t%v",
-		summary.FileCount, summary.TotalStep, summary.EmptyLineStep, summary.CommentStep, summary.SourceStep, summary.ValidStep)
+		summary.CountedFileCount, summary.TotalStep, summary.EmptyLineStep, summary.CommentStep, summary.SourceStep, summary.ValidStep)
 	s = append(s, stepAll)
 	s = append(s, "")
 
-	// 注释配置不存在文件
-	flatFile := "注释配置不存在文件："
+	// 注释定义不存在文件
+	flatFile := "注释定义不存在文件："
 	s = append(s, flatFile)
 	for _, v := range summary.FlatFile {
 		s = append(s, v)
 	}
 	s = append(s, "")
 
-	// 未统计目标类型文件
-	uncountedFile := "未统计目标类型文件："
+	// 未统计文件
+	uncountedFile := "未统计文件："
 	s = append(s, uncountedFile)
 	errHeader := "文件全路径\t备考"
 	s = append(s, errHeader)

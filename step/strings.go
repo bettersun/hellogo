@@ -70,3 +70,20 @@ func RemoveSpaceEmpty(slice []string) []string {
 
 	return slice
 }
+
+// RemoveRepeated 去除字符串切片中的重复字符串
+func RemoveRepeated(s []string) []string {
+	m := make(map[string]int8, 0)
+	for _, v := range s {
+		if _, ok := m[v]; !ok {
+			m[v] = 0
+		}
+	}
+
+	var result []string
+	for k, _ := range m {
+		result = append(result, k)
+	}
+
+	return result
+}

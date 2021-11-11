@@ -40,8 +40,6 @@ func Step(file []string) StepSummary {
 func Summary(stepInfo []StepInfo) StepSummary {
 	// 代码行数统计信息汇总
 	var stepSummary StepSummary
-	// 文件数
-	stepSummary.FileCount = len(stepInfo)
 	// 各文件的统计信息
 	stepSummary.StepInfo = stepInfo
 
@@ -65,6 +63,11 @@ func Summary(stepInfo []StepInfo) StepSummary {
 		// 未统计文件
 		if !step.Counted {
 			stepSummary.UnCountedFile = append(stepSummary.UnCountedFile, step.File)
+		}
+
+		// 统计文件总数
+		if step.Counted {
+			stepSummary.CountedFileCount = stepSummary.CountedFileCount + 1
 		}
 	}
 

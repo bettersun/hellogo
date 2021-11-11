@@ -87,8 +87,11 @@ func main() {
 		filepath.Walk(p, filter)
 	}
 
+	// 去除重复
+	singleCodeFile := step.RemoveRepeated(codeFile)
+
 	// 对统计目标文件切片里的所有文件进行统计
-	summary := step.Step(codeFile)
+	summary := step.Step(singleCodeFile)
 
 	// 输出结果类型
 	if config.ResultFileType != FileTypeText && config.ResultFileType != FileTypeJson {
